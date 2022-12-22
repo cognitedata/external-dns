@@ -449,7 +449,7 @@ func (pr affixNameMapper) toNewTXTName(endpointDNSName, recordType string) strin
 	}
 
 	if !pr.recordTypeInAffix() {
-		DNSName[0] = recordT + DNSName[0]
+		prefix = recordT + prefix
 	}
 
 	if len(DNSName) < 2 {
